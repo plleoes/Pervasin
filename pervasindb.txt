@@ -1,0 +1,15 @@
+create keyspace pervasin with placement_strategy = 'org.apache.cassandra.locator.SimpleStrategy' and strategy_options = [{replication_factor:1}];
+use pervasin;
+create column family preusu with comparator = UTF8Type and column_metadata = [{column_name: email, validation_class: UTF8Type}];
+create column family usuarios with comparator = UTF8Type and column_metadata = [{column_name: email, validation_class: UTF8Type, index_type: KEYS}, {column_name: shaem, validation_class: UTF8Type, index_type: KEYS}, {column_name: shap, validation_class: UTF8Type, index_type: KEYS}, {column_name: foto, validation_class: UTF8Type}];
+create column family paises with comparator = UTF8Type and column_metadata = [{column_name: pingles, validation_class: UTF8Type, index_type: KEYS}, {column_name: pespanol, validation_class: UTF8Type, index_type: KEYS}, {column_name: nativo, validation_class: UTF8Type, index_type: KEYS}];
+create column family lenguajes with comparator = UTF8Type and column_metadata = [{column_name: lingles, validation_class: UTF8Type, index_type: KEYS}, {column_name: lespanol, validation_class: UTF8Type, index_type: KEYS}];
+create column family amigos with comparator = UTF8Type;
+create column family seguidores with comparator = UTF8Type;
+create column family camigos with comparator = UTF8Type and column_metadata = [{column_name: ausername, validation_class: UTF8Type, index_type: KEYS}, {column_name: mens, validation_class: UTF8Type}];
+create column family tablon with comparator = UTF8Type and column_metadata = [{column_name: tusername, validation_class: UTF8Type, index_type: KEYS}, {column_name: mens, validation_class: UTF8Type}];
+create column family tcamigos with comparator = LongType and default_validation_class = TimeUUIDType;
+create column family tusuario with comparator = LongType and default_validation_class = TimeUUIDType;
+create column family ttablon with comparator = LongType and default_validation_class = TimeUUIDType;
+create column family intereses with comparator = UTF8Type and column_metadata = [{column_name: interes, validation_class: UTF8Type, index_type: KEYS}];
+
